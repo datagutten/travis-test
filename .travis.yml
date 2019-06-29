@@ -44,6 +44,8 @@ install:
 
 
 before_script:
+ # Work out of the tests directory
+ - cd tests
  # Environment checks
  - if [ $COMPOSER_PHPUNIT  == 'false'] then phpunit --version;
   else ../vendor/bin/phpunit --version;
