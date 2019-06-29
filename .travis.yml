@@ -47,11 +47,10 @@ before_script:
  # Work out of the tests directory
  - cd tests
  # Environment checks
- - if [ $COMPOSER_PHPUNIT  == 'false'] then phpunit --version;
-  else ../vendor/bin/phpunit --version;
-  fi
+ - if [ "$COMPOSER_PHPUNIT" == 'false' ]; then phpunit --version; else ../vendor/bin/phpunit --version; fi
 
 script:
- - if [ $COMPOSER_PHPUNIT  == 'false'] then phpunit;
+ - if [ "$COMPOSER_PHPUNIT"  == 'false' ];
+   then phpunit;
    else ../vendor/bin/phpunit;
    fi
