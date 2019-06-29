@@ -45,7 +45,7 @@ install:
 
 before_script:
  # Environment checks
- - if [ $(phpenv version-name) = "5.2" ] OR [ $(phpenv version-name) = "5.3" ] OR [ $(phpenv version-name) = "5.4" ] OR [ $(phpenv version-name) = "5.5" ];  then phpunit --version;
+ - if [ $COMPOSER_PHPUNIT  == 'false'] then phpunit --version;
   else ../vendor/bin/phpunit --version;
   fi
 
