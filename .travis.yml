@@ -1,57 +1,39 @@
-dist: trusty
 language: php
 matrix:
-  fast_finish: true
-  include:
-    - php: 5.2
-      dist: precise
-      env: COMPOSER_PHPUNIT=false
-    - php: 5.3
-      dist: precise
-      env: COMPOSER_PHPUNIT=false
-    - php: 5.4
-      env: COMPOSER_PHPUNIT=false
-    - php: 5.5
-      env: COMPOSER_PHPUNIT=false
-    - php: 5.6
-      env: TEST_COVERAGE=1 COMPOSER_PHPUNIT=true
-    - php: 7.0
-      env: COMPOSER_PHPUNIT=true
-    - php: 7.1
-      env: COMPOSER_PHPUNIT=true
-    - php: 7.2
-      env: COMPOSER_PHPUNIT=true
-    - php: nightly
-      env: COMPOSER_PHPUNIT=true
+ fast_finish: true
+ include:
+  - php: '7.2'
+  - php: '7.3'
+  - php: '7.4snapshot'
+  - php: 'nightly'
+    env: IGNORE_PLATFORM_REQS=true
+ allow_failures:
+  - php: '7.4snapshot'
+  - php: 'nightly'
 
-allow_failures:
-  - php: nightly
+addons:
+ apt:
+  packages:
+   - ldap-utils
+   - slapd
 
-# Use new container infrastructure
-sudo: false
 
-cache:
-  directories:
-    - $HOME/.cache/pip
-    - $HOME/.composer/cache/files
 
 install:
- # Setup the test server
- - phpenv local $( phpenv versions | grep 5.6 | tail -1 )
- - if [ "$COMPOSER_PHPUNIT" == 'false' ]; then composer remove phpunit/phpunit; fi
- - composer install --dev --no-interaction
- - TESTPHPBIN=$(phpenv which php)
- - phpenv local --unset
-
+ - if [ "$IGNORE_PLATFORM_REQS" == 'true' ]; then composer install --no-interaction --ignore-platform-reqs;
+  else composer install --no-interaction;
+  fi
 
 before_script:
- # Work out of the tests directory
- - cd tests
- # Environment checks
- - if [ "$COMPOSER_PHPUNIT" == 'false' ]; then phpunit --version; else ../vendor/bin/phpunit --version; fi
+ - vendor/bin/phpunit --version
+ - phpenv config-add tests/travis/enable-ldap.ini
+ - cat tests/ldapconfig.ini.dist | sed s/389/3389/ > tests/ldapconfig.ini
+ - mkdir /tmp/slapd
+ - slapd -f tests/ldif_data/slapd.conf -h ldap://localhost:3389 &
+ - sleep 3
+ - ldapadd -h localhost:3389 -D cn=admin,dc=example,dc=com -w test -f tests/ldif_data/base.ldif
+ - ldapadd -h localhost:3389 -D cn=admin,dc=example,dc=com -w test -f tests/ldif_data/INITIAL_TESTDATA.ldif
+
 
 script:
- - if [ "$COMPOSER_PHPUNIT" == 'false' ];
-   then phpunit;
-   else ../vendor/bin/phpunit;
-   fi
+ - vendor/bin/phpunit --coverage-clover clover.xml --bootstrap vendor/autoload.php tests
