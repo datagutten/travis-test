@@ -41,4 +41,5 @@ before_script:
 
 script:
  - php vendor/phpunit/phpunit/phpunit
+ - phpunit
  # - vendor/bin/phpunit --coverage-clover clover.xml --bootstrap vendor/autoload.php tests
