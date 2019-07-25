@@ -30,7 +30,7 @@ install:
 
 before_script:
  - vendor/bin/phpunit --version
- - phpenv config-add tests/travis/enable-ldap.ini
+ # - phpenv config-add tests/travis/enable-ldap.ini
  - cat tests/ldapconfig.ini.dist | sed s/389/3389/ > tests/ldapconfig.ini
  - mkdir /tmp/slapd
  - slapd -f tests/ldif_data/slapd.conf -h ldap://localhost:3389 &
@@ -40,4 +40,5 @@ before_script:
 
 
 script:
- - vendor/bin/phpunit --coverage-clover clover.xml --bootstrap vendor/autoload.php tests
+ - php vendor/phpunit/phpunit/phpunit
+ # - vendor/bin/phpunit --coverage-clover clover.xml --bootstrap vendor/autoload.php tests
