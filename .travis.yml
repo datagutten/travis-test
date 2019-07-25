@@ -16,6 +16,7 @@ addons:
   packages:
    - ldap-utils
    - slapd
+   - php-ldap
 
 
 
