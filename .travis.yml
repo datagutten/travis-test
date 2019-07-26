@@ -19,7 +19,7 @@ addons:
   packages:
    - ldap-utils
    - slapd
-   - php-ldap
+   # - php-ldap
 
 
 
@@ -29,7 +29,7 @@ install:
   fi
 
 before_script:
- - vendor/bin/phpunit --version
+ # - vendor/bin/phpunit --version
  # - phpenv config-add tests/travis/enable-ldap.ini
  - cat tests/ldapconfig.ini.dist | sed s/389/3389/ > tests/ldapconfig.ini
  - mkdir /tmp/slapd
