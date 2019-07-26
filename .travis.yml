@@ -8,8 +8,6 @@ matrix:
   - php: '7.2'
   - php: '7.3'
   - php: '7.4snapshot'
-  - php: 'nightly'
-    env: IGNORE_PLATFORM_REQS=true
  allow_failures:
   - php: '7.4snapshot'
   - php: 'nightly'
@@ -21,12 +19,6 @@ addons:
    - slapd
    # - php-ldap
 
-
-
-install:
- - if [ "$IGNORE_PLATFORM_REQS" == 'true' ]; then composer install --no-interaction --ignore-platform-reqs;
-  else composer install --no-interaction;
-  fi
 
 before_script:
  # - vendor/bin/phpunit --version
@@ -40,6 +32,7 @@ before_script:
  - ldapadd -h localhost:3389 -D cn=admin,dc=example,dc=com -w test -f tests/ldif_data/base.ldif
  - ldapadd -c -h localhost:3389 -D cn=admin,dc=example,dc=com -w test -f tests/adtools_test_data.ldif
  - ldapadd -h localhost:3389 -D cn=admin,dc=example,dc=com -w test -f tests/ldif_data/INITIAL_TESTDATA.ldif
+ - composer install --no-interaction
 
 
 script:
