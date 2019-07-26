@@ -21,11 +21,12 @@ changetype: add
 objectClass: top
 objectClass: person
 objectClass: organizationalPerson
+objectClass: inetOrgPerson
 cn: user1
+sn: test
 givenName: user1
 displayName: user1
-pwdLastSet: 132086169267546945
-primaryGroupID: 513
+
 sAMAccountName: user1
 sAMAccountType: 805306368
 userPrincipalName: user1@example.com
@@ -36,11 +37,12 @@ changetype: add
 objectClass: top
 objectClass: person
 objectClass: organizationalPerson
+objectClass: inetOrgPerson
 cn: user2
+sn: test
 givenName: user2
 displayName: user2
-pwdLastSet: 132086169494549860
-primaryGroupID: 513
+
 sAMAccountName: user2
 sAMAccountType: 805306368
 userPrincipalName: user2@example.com
