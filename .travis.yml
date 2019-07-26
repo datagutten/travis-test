@@ -23,8 +23,9 @@ addons:
 before_script:
  # - vendor/bin/phpunit --version
  # - phpenv config-add tests/travis/enable-ldap.ini
- - cat tests/ldapconfig.ini.dist | sed s/389/3389/ > tests/ldapconfig.ini
- - cat tests/slapd.conf.dist | sed 's/__SCHEMADIR__/\/mnt\/github\/travis-test\/tests\/schema/' > tests/slapd.conf
+ #- cat tests/ldapconfig.ini.dist | sed s/389/3389/ > tests/ldapconfig.ini
+ #- cat tests/slapd.conf.dist | sed 's/__SCHEMADIR__/\/mnt\/github\/travis-test\/tests\/schema/' > tests/slapd.conf
+ - php tests/build_config.php
  - mkdir /tmp/slapd
  - set +e
  - ps aux|grep slapd
