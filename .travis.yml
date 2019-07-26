@@ -27,8 +27,10 @@ before_script:
  - cat tests/slapd.conf.dist | sed 's/__SCHEMADIR__/\/mnt\/github\/travis-test\/tests\/schema/' > tests/slapd.conf
  - mkdir /tmp/slapd
  - set +e
+ - ps aux|grep slapd
  - sudo killall /usr/sbin/slapd
- - sudo slapd -f tests/slapd.conf
+ - ps aux|grep slapd
+ - sudo slapd -f tests/slapd.conf -d 255
  - ps aux|grep slapd
  - sleep 3
  - ldapadd -h localhost:389 -D cn=admin,dc=example,dc=com -w test -f tests/ldif_data/base.ldif
