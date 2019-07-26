@@ -5,7 +5,7 @@ class Test extends TestCase
 {
     function testDummy()
     {
-        $this->assertEqual('foo', 'foo');
+        $this->assertEquals('foo', 'foo');
     }
 
     function testLdap()
