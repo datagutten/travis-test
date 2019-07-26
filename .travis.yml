@@ -31,7 +31,7 @@ before_script:
  - ps aux|grep slapd
  - sudo killall /usr/sbin/slapd
  - ps aux|grep slapd
- - sudo slapd -f tests/slapd.conf -d 255
+ - sudo slapd -f tests/slapd.conf &
  - ps aux|grep slapd
  - sleep 3
  - ldapadd -h localhost:389 -D cn=admin,dc=example,dc=com -w test -f tests/ldif_data/base.ldif
