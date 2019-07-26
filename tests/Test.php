@@ -17,7 +17,7 @@ class Test extends TestCase
         if (!ldap_set_option($ldap, LDAP_OPT_REFERRALS, 0))
             throw new Exception('Failed to set opt referrals to 0');
 
-        ldap_bind($ldap, 'cn=admin,dc=example,dc=com', 'test');
+        ldap_bind($ldap, 'admin', 'test');
 
 
     }
