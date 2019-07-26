@@ -1,0 +1,417 @@
+dn: CN=Office365 Testkurs,OU=Office365-test,OU=Test,dc=example,dc=com
+changetype: add
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Office365 Testkurs
+sn: Testkurs
+givenName: Office365
+distinguishedName: 
+ CN=Office365 Testkurs,OU=Office365-test,OU=Test,dc=example,dc=com
+instanceType: 4
+whenCreated: 20180411110416.0Z
+whenChanged: 20180411115109.0Z
+displayName: Office365 Testkurs
+uSNCreated: 59967866
+memberOf: 
+ CN=faculty-office365,OU=Cloud,OU=Grupper,OU=Adminnett,dc=example,dc=com
+uSNChanged: 59970700
+proxyAddresses: 
+ x500:/o=ExchangeLabs/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Rec
+ ipients/cn=582cfb117ed04234b40b8bc249a4b844-Office365 T
+name: Office365 Testkurs
+userAccountControl: 512
+badPwdCount: 0
+codePage: 0
+countryCode: 0
+badPasswordTime: 0
+lastLogoff: 0
+lastLogon: 0
+pwdLastSet: 131679182563371321
+primaryGroupID: 513
+objectSid:: AQUAAAAAAAUVAAAAk+NiSD+tFGJDFwoyUjkAAA==
+accountExpires: 9223372036854775807
+logonCount: 0
+sAMAccountName: office365.testkurs
+sAMAccountType: 805306368
+userPrincipalName: office365.testkurs@as.kommune.no
+objectCategory: CN=Person,CN=Schema,CN=Configuration,dc=example,dc=com
+dSCorePropagationData: 16010101000000.0Z
+mS-DS-ConsistencyGuid:: AGwyE5C630OE7tTeFTa7qQ==
+
+dn: OU=TEIS-test,OU=Test,dc=example,dc=com
+changetype: add
+objectClass: top
+objectClass: organizationalUnit
+ou: TEIS-test
+description: 100001
+distinguishedName: OU=TEIS-test,OU=Test,dc=example,dc=com
+instanceType: 4
+whenCreated: 20170703060912.0Z
+whenChanged: 20170911103300.0Z
+uSNCreated: 36300493
+uSNChanged: 38532808
+name: TEIS-test
+objectCategory: 
+ CN=Organizational-Unit,CN=Schema,CN=Configuration,dc=example,dc=com
+dSCorePropagationData: 20171215092004.0Z
+dSCorePropagationData: 20171214130156.0Z
+dSCorePropagationData: 20171208101517.0Z
+dSCorePropagationData: 20171208100104.0Z
+dSCorePropagationData: 16010714223649.0Z
+
+dn: CN=MailTest09 TestMail09,OU=TEIS-test,OU=Test,dc=example,dc=com
+changetype: add
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: MailTest09 TestMail09
+sn: TestMail09
+title: Test user
+givenName: MailTest09
+distinguishedName: 
+ CN=MailTest09 TestMail09,OU=TEIS-test,OU=Test,dc=example,dc=com
+instanceType: 4
+whenCreated: 20180108102821.0Z
+whenChanged: 20180226073837.0Z
+displayName: MailTest09 TestMail09
+uSNCreated: 43434822
+uSNChanged: 58235220
+department: Tieto
+company:: w4VzIEtvbW11bmU=
+proxyAddresses: smtp:MailTest09.TestMail09@as-admin.no
+proxyAddresses: smtp:AK19119109@0214.no
+proxyAddresses: 
+ X400:C=NO;A= ;P=As Kommune;O=Exchange;S=TestMail09;G=MailTest09;
+proxyAddresses: SMTP:MailTest09.TestMail09@as.kommune.no
+homeMDB: 
+ CN=MBDB01,CN=Databases,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=A
+ dministrative Groups,CN=As Kommune,CN=Microsoft Exchange,CN=Services,CN=Config
+ uration,dc=example,dc=com
+mDBUseDefaults: TRUE
+mailNickname: AK19119109
+employeeNumber: 0123678909
+name: MailTest09 TestMail09
+userAccountControl: 544
+badPwdCount: 0
+codePage: 0
+countryCode: 0
+employeeID: 19119109
+homeDirectory: \\fil04\Brukere$\AK19119109
+homeDrive: H:
+badPasswordTime: 0
+lastLogoff: 0
+lastLogon: 0
+scriptPath: kix32.exe logon.kix
+pwdLastSet: 0
+primaryGroupID: 513
+profilePath: \\fil04\Brukere$\AK19119109\local
+objectSid:: AQUAAAAAAAUVAAAAk+NiSD+tFGJDFwoyyjgAAA==
+accountExpires: 9223372036854775807
+logonCount: 0
+sAMAccountName: AK19119109
+sAMAccountType: 805306368
+showInAddressBook: 
+ CN=All Users,CN=All Address Lists,CN=Address Lists Container,CN=As Kommune,CN=
+ Microsoft Exchange,CN=Services,CN=Configuration,dc=example,dc=com
+showInAddressBook: 
+ CN=Default Global Address List,CN=All Global Address Lists,CN=Address Lists Co
+ ntainer,CN=As Kommune,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=as
+ -admin,DC=no
+legacyExchangeDN: 
+ /o=As Kommune/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients
+ /cn=6ff9cf6e755346c6a9d25f557bd440e5-MailTest09 Te
+userPrincipalName: AK19119109@as-admin.no
+objectCategory: CN=Person,CN=Schema,CN=Configuration,dc=example,dc=com
+dSCorePropagationData: 16010101000000.0Z
+textEncodedORAddress: 
+ X400:C=NO;A= ;P=As Kommune;O=Exchange;S=TestMail09;G=MailTest09;
+mail: pontus.werme@tieto.com
+msExchHomeServerName: 
+ /o=As Kommune/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configurat
+ ion/cn=Servers/cn=MAIL03
+msExchMailboxSecurityDescriptor:: 
+ AQAEgBQAAAAgAAAAAAAAACwAAAABAQAAAAAABQoAAAABAQAAAAAABQoAAAAEABwAAQAAAAACFAABAA
+ IAAQEAAAAAAAUKAAAA
+msExchUserAccountControl: 0
+msExchMailboxGuid:: M7h6/kNiq06h8VjhRXsbCA==
+msExchPoliciesIncluded: a94dc50e-de05-4337-8d2b-f25887605469
+msExchPoliciesIncluded: {26491cfc-9e50-4857-861b-0cb8df22b5d7}
+msExchTextMessagingState: 302120705
+msExchTextMessagingState: 16842751
+msExchCalendarLoggingQuota: 6291456
+msExchDumpsterQuota: 31457280
+msExchRecipientDisplayType: 1073741824
+msExchArchiveQuota: 104857600
+msExchELCMailboxFlags: 130
+msExchDumpsterWarningQuota: 20971520
+msExchUMDtmfMap: emailAddress:62458378098378624509
+msExchUMDtmfMap: lastNameFirstName:83786245096245837809
+msExchUMDtmfMap: firstNameLastName:62458378098378624509
+msExchArchiveWarnQuota: 94371840
+msExchRecipientTypeDetails: 1
+msExchWhenMailboxCreated: 20180108102824.0Z
+msExchRBACPolicyLink: 
+ CN=Default Role Assignment Policy,CN=Policies,CN=RBAC,CN=As Kommune,CN=Microso
+ ft Exchange,CN=Services,CN=Configuration,dc=example,dc=com
+msExchVersion: 88218628259840
+
+dn: CN=Test NewFileShare,OU=TEIS-test,OU=Test,dc=example,dc=com
+changetype: add
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Test NewFileShare
+sn: NewFileShare
+title: TestUser
+givenName: Test
+distinguishedName: CN=Test NewFileShare,OU=TEIS-test,OU=Test,dc=example,dc=com
+instanceType: 4
+whenCreated: 20180522131620.0Z
+whenChanged: 20180523000018.0Z
+displayName: Test NewFileShare
+uSNCreated: 61940473
+uSNChanged: 61956137
+department: Test
+company:: w4VzIEtvbW11bmU=
+proxyAddresses: smtp:Test.NewFileShare@as-admin.no
+proxyAddresses: smtp:AK13579@0214.no
+proxyAddresses: X400:C=NO;A= ;P=As Kommune;O=Exchange;S=NewFileShare;G=Test;
+proxyAddresses: SMTP:Test.NewFileShare@as.kommune.no
+homeMDB: 
+ CN=MBDB01,CN=Databases,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=A
+ dministrative Groups,CN=As Kommune,CN=Microsoft Exchange,CN=Services,CN=Config
+ uration,dc=example,dc=com
+mDBUseDefaults: TRUE
+mailNickname: AK13579
+employeeNumber: 12311236452
+name: Test NewFileShare
+userAccountControl: 544
+badPwdCount: 0
+codePage: 0
+countryCode: 0
+employeeID: 13579
+homeDirectory: \\fil05\brukere\AK13579
+homeDrive: H:
+badPasswordTime: 0
+lastLogoff: 0
+lastLogon: 0
+scriptPath: kix32.exe logon.kix
+pwdLastSet: 0
+primaryGroupID: 513
+profilePath: \\fil05\brukere\AK13579\local
+objectSid:: AQUAAAAAAAUVAAAAk+NiSD+tFGJDFwoysjkAAA==
+accountExpires: 9223372036854775807
+logonCount: 0
+sAMAccountName: AK13579
+sAMAccountType: 805306368
+showInAddressBook: 
+ CN=All Users,CN=All Address Lists,CN=Address Lists Container,CN=As Kommune,CN=
+ Microsoft Exchange,CN=Services,CN=Configuration,dc=example,dc=com
+showInAddressBook: 
+ CN=Default Global Address List,CN=All Global Address Lists,CN=Address Lists Co
+ ntainer,CN=As Kommune,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=as
+ -admin,DC=no
+legacyExchangeDN: 
+ /o=As Kommune/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients
+ /cn=7438df0a74104b82abef24dfd88ebb6c-Test NewFileS
+userPrincipalName: AK13579@as-admin.no
+objectCategory: CN=Person,CN=Schema,CN=Configuration,dc=example,dc=com
+dSCorePropagationData: 16010101000000.0Z
+textEncodedORAddress: 
+ X400:C=NO;A= ;P=As Kommune;O=Exchange;S=NewFileShare;G=Test;
+mail: Test.NewFileShare@as.kommune.no
+msExchHomeServerName: 
+ /o=As Kommune/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configurat
+ ion/cn=Servers/cn=MAIL03
+msExchMailboxSecurityDescriptor:: 
+ AQAEgBQAAAAgAAAAAAAAACwAAAABAQAAAAAABQoAAAABAQAAAAAABQoAAAAEABwAAQAAAAACFAABAA
+ IAAQEAAAAAAAUKAAAA
+msExchUserAccountControl: 0
+msExchMailboxGuid:: ZwQ/HOSGRkaQfNTE6RIJOg==
+msExchPoliciesIncluded: a94dc50e-de05-4337-8d2b-f25887605469
+msExchPoliciesIncluded: {26491cfc-9e50-4857-861b-0cb8df22b5d7}
+msExchTextMessagingState: 302120705
+msExchTextMessagingState: 16842751
+msExchCalendarLoggingQuota: 6291456
+msExchDumpsterQuota: 31457280
+msExchRecipientDisplayType: 1073741824
+msExchArchiveQuota: 104857600
+msExchELCMailboxFlags: 130
+msExchDumpsterWarningQuota: 20971520
+msExchUMDtmfMap: emailAddress:8378639345374273
+msExchUMDtmfMap: lastNameFirstName:6393453742738378
+msExchUMDtmfMap: firstNameLastName:8378639345374273
+msExchArchiveWarnQuota: 94371840
+msExchRecipientTypeDetails: 1
+msExchWhenMailboxCreated: 20180522131623.0Z
+msExchRBACPolicyLink: 
+ CN=Default Role Assignment Policy,CN=Policies,CN=RBAC,CN=As Kommune,CN=Microso
+ ft Exchange,CN=Services,CN=Configuration,dc=example,dc=com
+msExchVersion: 88218628259840
+
+dn: CN=FName LName,OU=TEIS-test,OU=Test,dc=example,dc=com
+changetype: add
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: FName LName
+sn: LName
+title:: VGVzdGFuw6RuZGFyZQ==
+givenName: FName
+distinguishedName: CN=FName LName,OU=TEIS-test,OU=Test,dc=example,dc=com
+instanceType: 4
+whenCreated: 20180226123959.0Z
+whenChanged: 20180522135508.0Z
+displayName: FName LName
+uSNCreated: 58251605
+uSNChanged: 61942188
+department: Test
+company:: w4VzIEtvbW11bmU=
+proxyAddresses: SMTP:FName.LName@as.kommune.no
+employeeNumber: 12383636452
+name: FName LName
+userAccountControl: 544
+badPwdCount: 0
+codePage: 0
+countryCode: 0
+employeeID: 10001201
+homeDirectory: \\fil05\brukere\AK10001201
+homeDrive: H:
+badPasswordTime: 0
+lastLogoff: 0
+lastLogon: 0
+scriptPath: kix32.exe logon.kix
+pwdLastSet: 0
+primaryGroupID: 513
+profilePath: \\fil05\brukere\AK10001201\local
+objectSid:: AQUAAAAAAAUVAAAAk+NiSD+tFGJDFwoyLTkAAA==
+accountExpires: 9223372036854775807
+logonCount: 0
+sAMAccountName: AK10001201
+sAMAccountType: 805306368
+userPrincipalName: AK10001201@as-admin.no
+objectCategory: CN=Person,CN=Schema,CN=Configuration,dc=example,dc=com
+dSCorePropagationData: 16010101000000.0Z
+mail: FName.LName@as.kommune.no
+
+dn: OU=TEIS-test-grupper,OU=Test,dc=example,dc=com
+changetype: add
+objectClass: top
+objectClass: organizationalUnit
+ou: TEIS-test-grupper
+distinguishedName: OU=TEIS-test-grupper,OU=Test,dc=example,dc=com
+instanceType: 4
+whenCreated: 20170703060943.0Z
+whenChanged: 20170703060951.0Z
+uSNCreated: 36300525
+uSNChanged: 36300525
+name: TEIS-test-grupper
+objectCategory: 
+ CN=Organizational-Unit,CN=Schema,CN=Configuration,dc=example,dc=com
+dSCorePropagationData: 20171215092004.0Z
+dSCorePropagationData: 20171214130156.0Z
+dSCorePropagationData: 20171208101517.0Z
+dSCorePropagationData: 20171208100104.0Z
+dSCorePropagationData: 16010714223649.0Z
+
+dn: CN=Teist-test-gruppe1,OU=TEIS-test-grupper,OU=Test,dc=example,dc=com
+changetype: add
+objectClass: top
+objectClass: group
+cn: Teist-test-gruppe1
+distinguishedName: 
+ CN=Teist-test-gruppe1,OU=TEIS-test-grupper,OU=Test,dc=example,dc=com
+instanceType: 4
+whenCreated: 20170703061123.0Z
+whenChanged: 20170703061137.0Z
+uSNCreated: 36300619
+uSNChanged: 36300619
+name: Teist-test-gruppe1
+objectSid:: AQUAAAAAAAUVAAAAk+NiSD+tFGJDFwoyOjAAAA==
+sAMAccountName: Teist-test-gruppe1
+sAMAccountType: 268435456
+groupType: -2147483640
+objectCategory: CN=Group,CN=Schema,CN=Configuration,dc=example,dc=com
+dSCorePropagationData: 20171215092004.0Z
+dSCorePropagationData: 20171214130156.0Z
+dSCorePropagationData: 20171208101517.0Z
+dSCorePropagationData: 20171208100104.0Z
+dSCorePropagationData: 16010714223649.0Z
+
+dn: CN=Teist-test-gruppe2,OU=TEIS-test-grupper,OU=Test,dc=example,dc=com
+changetype: add
+objectClass: top
+objectClass: group
+cn: Teist-test-gruppe2
+distinguishedName: 
+ CN=Teist-test-gruppe2,OU=TEIS-test-grupper,OU=Test,dc=example,dc=com
+instanceType: 4
+whenCreated: 20170703061132.0Z
+whenChanged: 20170703061137.0Z
+uSNCreated: 36300620
+uSNChanged: 36300620
+name: Teist-test-gruppe2
+objectSid:: AQUAAAAAAAUVAAAAk+NiSD+tFGJDFwoyOzAAAA==
+sAMAccountName: Teist-test-gruppe2
+sAMAccountType: 268435456
+groupType: -2147483640
+objectCategory: CN=Group,CN=Schema,CN=Configuration,dc=example,dc=com
+dSCorePropagationData: 20171215092004.0Z
+dSCorePropagationData: 20171214130156.0Z
+dSCorePropagationData: 20171208101517.0Z
+dSCorePropagationData: 20171208100104.0Z
+dSCorePropagationData: 16010714223649.0Z
+
+dn: CN=Teist-test-gruppe3,OU=TEIS-test-grupper,OU=Test,dc=example,dc=com
+changetype: add
+objectClass: top
+objectClass: group
+cn: Teist-test-gruppe3
+distinguishedName: 
+ CN=Teist-test-gruppe3,OU=TEIS-test-grupper,OU=Test,dc=example,dc=com
+instanceType: 4
+whenCreated: 20170703061155.0Z
+whenChanged: 20170703061203.0Z
+uSNCreated: 36300642
+uSNChanged: 36300642
+name: Teist-test-gruppe3
+objectSid:: AQUAAAAAAAUVAAAAk+NiSD+tFGJDFwoyPDAAAA==
+sAMAccountName: Teist-test-gruppe3
+sAMAccountType: 268435456
+groupType: -2147483646
+objectCategory: CN=Group,CN=Schema,CN=Configuration,dc=example,dc=com
+dSCorePropagationData: 20171215092004.0Z
+dSCorePropagationData: 20171214130156.0Z
+dSCorePropagationData: 20171208101517.0Z
+dSCorePropagationData: 20171208100104.0Z
+dSCorePropagationData: 16010714223649.0Z
+
+dn: CN=Teist-test-gruppe4,OU=TEIS-test-grupper,OU=Test,dc=example,dc=com
+changetype: add
+objectClass: top
+objectClass: group
+cn: Teist-test-gruppe4
+distinguishedName: 
+ CN=Teist-test-gruppe4,OU=TEIS-test-grupper,OU=Test,dc=example,dc=com
+instanceType: 4
+whenCreated: 20170703061202.0Z
+whenChanged: 20170703061203.0Z
+uSNCreated: 36300643
+uSNChanged: 36300643
+name: Teist-test-gruppe4
+objectSid:: AQUAAAAAAAUVAAAAk+NiSD+tFGJDFwoyPTAAAA==
+sAMAccountName: Teist-test-gruppe4
+sAMAccountType: 268435456
+groupType: -2147483646
+objectCategory: CN=Group,CN=Schema,CN=Configuration,dc=example,dc=com
+dSCorePropagationData: 20171215092004.0Z
+dSCorePropagationData: 20171214130156.0Z
+dSCorePropagationData: 20171208101517.0Z
+dSCorePropagationData: 20171208100104.0Z
+dSCorePropagationData: 16010714223649.0Z
+

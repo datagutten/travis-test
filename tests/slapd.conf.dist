@@ -1,0 +1,29 @@
+# See slapd.conf(5) for details on configuration options.
+include		__SCHEMADIR__/microsoftattributetype.schema
+include		__SCHEMADIR__/microsoftattributetypestd.schema
+include		__SCHEMADIR__/corba.schema
+include		__SCHEMADIR__/core.schema
+include		__SCHEMADIR__/cosine.schema
+include		__SCHEMADIR__/duaconf.schema
+include		__SCHEMADIR__/dyngroup.schema
+include		__SCHEMADIR__/inetorgperson.schema
+include		__SCHEMADIR__/java.schema
+include		__SCHEMADIR__/misc.schema
+include		__SCHEMADIR__/nis.schema
+include		__SCHEMADIR__/openldap.schema
+include		__SCHEMADIR__/ppolicy.schema
+include		__SCHEMADIR__/collective.schema
+include		__SCHEMADIR__/microsoftobjectclass.schema
+
+pidfile         /tmp/slapd/slapd.pid
+argsfile        /tmp/slapd/slapd.args
+
+modulepath     /usr/lib/openldap
+
+database  ldif
+directory /tmp/slapd
+
+suffix    "dc=example,dc=com"
+rootdn    "cn=admin,dc=example,dc=com"
+rootpw    {SSHA}AIzygLSXlArhAMzddUriXQxf7UlkqopP
+# rootpw    {SSHA}gR3hCX5OLBDXs23C5MrrE05EKjlb/iOB

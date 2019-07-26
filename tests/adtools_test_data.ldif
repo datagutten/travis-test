@@ -1,0 +1,54 @@
+dn: OU=Test,DC=example,DC=com
+changetype: add
+objectClass: top
+objectClass: organizationalUnit
+ou: Test
+
+dn: OU=adtools-test,OU=Test,DC=example,DC=com
+changetype: add
+objectClass: top
+objectClass: organizationalUnit
+ou: adtools-test
+
+dn: OU=Users,OU=adtools-test,OU=Test,DC=example,DC=com
+changetype: add
+objectClass: top
+objectClass: organizationalUnit
+ou: Users
+
+dn: CN=user1,OU=Users,OU=adtools-test,OU=Test,DC=example,DC=com
+changetype: add
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+cn: user1
+givenName: user1
+displayName: user1
+pwdLastSet: 132086169267546945
+primaryGroupID: 513
+sAMAccountName: user1
+sAMAccountType: 805306368
+userPrincipalName: user1@example.com
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=example,DC=com
+
+dn: CN=user2,OU=Users,OU=adtools-test,OU=Test,DC=example,DC=com
+changetype: add
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+cn: user2
+givenName: user2
+displayName: user2
+pwdLastSet: 132086169494549860
+primaryGroupID: 513
+sAMAccountName: user2
+sAMAccountType: 805306368
+userPrincipalName: user2@example.com
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=example,DC=com
+
+dn: OU=move,OU=adtools-test,OU=Test,DC=example,DC=com
+changetype: add
+objectClass: top
+objectClass: organizationalUnit
+ou: move
+
