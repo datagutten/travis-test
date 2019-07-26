@@ -3,8 +3,6 @@ language: php
 matrix:
  fast_finish: true
  include:
-  - php: '7.0'
-  - php: '7.1'
   - php: '7.2'
   - php: '7.3'
   - php: '7.4snapshot'
@@ -31,7 +29,7 @@ before_script:
  - ps aux|grep slapd
  - sudo killall /usr/sbin/slapd
  - ps aux|grep slapd
- - sudo slapd -f tests/slapd.conf &
+ - sudo slapd -f tests/slapd_standard.conf &
  - ps aux|grep slapd
  - sleep 3
  - ldapadd -h localhost:389 -D cn=admin,dc=example,dc=com -w test -f tests/ldif_data/base.ldif
@@ -41,6 +39,6 @@ before_script:
 
 
 script:
- - php vendor/phpunit/phpunit/phpunit
+ - vendor/bin/phpunit
  - phpunit
  # - vendor/bin/phpunit --coverage-clover clover.xml --bootstrap vendor/autoload.php tests
