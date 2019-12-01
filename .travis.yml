@@ -1,44 +1,15 @@
 dist: xenial
-language: php
-matrix:
- fast_finish: true
- include:
-  - php: '7.2'
-  - php: '7.3'
-  - php: '7.4snapshot'
- allow_failures:
-  - php: '7.4snapshot'
-  - php: 'nightly'
+language: python
 
 addons:
  apt:
   packages:
-   - ldap-utils
-   - slapd
-   # - php-ldap
+   - snmp
 
 
 before_script:
- # - vendor/bin/phpunit --version
- # - phpenv config-add tests/travis/enable-ldap.ini
- #- cat tests/ldapconfig.ini.dist | sed s/389/3389/ > tests/ldapconfig.ini
- #- cat tests/slapd.conf.dist | sed 's/__SCHEMADIR__/\/mnt\/github\/travis-test\/tests\/schema/' > tests/slapd.conf
- - php tests/build_config.php
- - mkdir /tmp/slapd
- - set +e
- - ps aux|grep slapd
- - sudo killall /usr/sbin/slapd
- - ps aux|grep slapd
- - sudo slapd -f tests/slapd_standard.conf &
- - ps aux|grep slapd
- - sleep 3
- - ldapadd -h localhost:389 -D cn=admin,dc=example,dc=com -w test -f tests/ldif_data/base.ldif
- - ldapadd -c -h localhost:389 -D cn=admin,dc=example,dc=com -w test -f tests/adtools_test_data.ldif
- - ldapadd -h localhost:389 -D cn=admin,dc=example,dc=com -w test -f tests/ldif_data/INITIAL_TESTDATA.ldif
- - composer install --no-interaction
-
+ - pip3 install snmpsim
+ - snmpsimd.py --data-dir=tests/snmp_data --agent-udpv4-endpoint=127.0.0.1:161
 
 script:
- - vendor/bin/phpunit
- - phpunit
- # - vendor/bin/phpunit --coverage-clover clover.xml --bootstrap vendor/autoload.php tests
+ - snmpwalk -c public 127.0.0.1
