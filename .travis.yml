@@ -13,7 +13,7 @@ before_script:
  - sudo -H pip3 install snmpsim
  - sudo which snmpsimd.py
  - sudo mkdir /var/run/snmpsim
- - sudo snmpsimd.py --data-dir=tests/snmp_data --process-user=nobody --process-group=nogroup --agent-udpv4-endpoint=127.0.0.1:161 --logging-method=null &
+ - sudo snmpsimd.py --data-dir=tests/snmp_data --process-user=nobody --process-group=nogroup --agent-udpv4-endpoint=127.0.0.1:161 &
 
 script:
- - snmpwalk -v2c -c public 127.0.0.1
+ - snmpwalk -v2c -c cisco_16_switch 127.0.0.1
