@@ -6,18 +6,19 @@ addons:
  apt:
   packages:
    - snmp
-   - python3-pip
+   #- python3-pip
 
 install:
  - git clone https://github.com/etingof/snmpsim.git
 
 before_script:
- - sudo which pip3
+ #- cd snmpsim
  - pip install snmpsim
- - sudo -H pip3 install snmpsim
- - sudo which snmpsimd.py
- - sudo mkdir /var/run/snmpsim
- - sudo python snmpsim/snmpsimd.py --data-dir=tests/snmp_data --process-user=nobody --process-group=nogroup --agent-udpv4-endpoint=127.0.0.1:161 --cache-dir=tests/snmp_data &
+ - which snmpsim
+ #- sudo -H pip3 install snmpsim
+ #- sudo which snmpsimd.py
+ #- sudo mkdir /var/run/snmpsim
+ - sudo python snmpsim/scripts/snmpsimd.py --data-dir=tests/snmp_data --process-user=nobody --process-group=nogroup --agent-udpv4-endpoint=127.0.0.1:161 --cache-dir=tests/snmp_data &
 
 script:
  - snmpwalk -v2c -c cisco 127.0.0.1
