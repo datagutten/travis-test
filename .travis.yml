@@ -8,7 +8,8 @@ addons:
 
 
 before_script:
- - sudo pip3 install snmpsim
+ - sudo pip install snmpsim
+ - which snmpsimd.py
  - sudo snmpsimd.py --data-dir=tests/snmp_data --process-user=nobody --process-group=nogroup --agent-udpv4-endpoint=127.0.0.1:161
 
 script:
