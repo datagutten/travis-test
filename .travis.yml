@@ -21,7 +21,7 @@ before_script:
  #- sudo -H pip3 install snmpsim
  #- sudo which snmpsimd.py
  #- sudo mkdir /var/run/snmpsim
- - sudo $PYTHON_BIN $SIM_BIN --data-dir=tests/snmp_data --process-user=nobody --process-group=nogroup --agent-udpv4-endpoint=127.0.0.1:161 --cache-dir=tests/snmp_data &
+ - sudo "$PYTHON_BIN" "$SIM_BIN" --data-dir=tests/snmp_data --process-user=nobody --process-group=nogroup --agent-udpv4-endpoint=127.0.0.1:161 --cache-dir=tests/snmp_data &
 
 script:
  - snmpwalk -v2c -c cisco 127.0.0.1
