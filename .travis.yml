@@ -9,7 +9,7 @@ addons:
 
 before_script:
  - pip3 install snmpsim
- - snmpsimd.py --data-dir=tests/snmp_data --agent-udpv4-endpoint=127.0.0.1:161
+ - sudo snmpsimd.py --data-dir=tests/snmp_data --process-user=nobody --process-group=nogroup --agent-udpv4-endpoint=127.0.0.1:161
 
 script:
  - snmpwalk -c public 127.0.0.1
