@@ -8,13 +8,14 @@ addons:
    - snmp
    #- python3-pip
 
-install:
- - git clone https://github.com/etingof/snmpsim.git
+#install:
+# - git clone https://github.com/etingof/snmpsim.git
 
 before_script:
  #- cd snmpsim
  - pip install snmpsim
  - SIM_BIN=$(which snmpsimd.py)
+ - which snmpsimd.py
  #- sudo -H pip3 install snmpsim
  #- sudo which snmpsimd.py
  #- sudo mkdir /var/run/snmpsim
