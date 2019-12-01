@@ -10,6 +10,7 @@ addons:
 before_script:
  - sudo pip install snmpsim
  - sudo which snmpsimd.py
+ - sudo which pip3
  - sudo mkdir /var/run/snmpsim
  - sudo snmpsimd.py --data-dir=tests/snmp_data --process-user=nobody --process-group=nogroup --agent-udpv4-endpoint=127.0.0.1:161 --logging-method=null &
 
