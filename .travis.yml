@@ -3,6 +3,7 @@ os: windows
 
 before_install:
   - choco install python
+  - refreshenv
   #- choco install pywin32
   #- python -m pip install pyinstaller
 install:
