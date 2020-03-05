@@ -6,7 +6,7 @@ before_install:
   #- choco install pywin32
   - python -m pip install pyinstaller
 install:
-  - python -m pip install pywin32
+  #- python -m pip install pywin32
   - python -V
   - where python
   - set
