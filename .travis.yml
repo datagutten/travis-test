@@ -1,19 +1,12 @@
-dist: bionic
-language: python
-python: 3.6
-
-addons:
- apt:
-  packages:
-   - snmp
-   #- python3-pip
-services:
- - docker
+language: sh
+os: windows
 
 before_install:
- - WORK_DIR=$(pwd)
- - docker pull tandrup/snmpsim
- - docker run -d -v $WORK_DIR/tests/snmp_data:/usr/local/snmpsim/data -p 161:161/udp tandrup/snmpsim
-
-script:
- - snmpwalk -v2c -c cisco 127.0.0.1
+  - choco install python
+  #- choco install pywin32
+  - python -m pip install pyinstaller
+install:
+  - python -m pip install pywin32
+  - python -V
+  - where python
+  - set
