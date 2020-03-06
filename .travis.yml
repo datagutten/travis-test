@@ -2,14 +2,15 @@ language: sh
 os: windows
 
 before_install:
-  - choco upgrade chocolatey
+  # - choco upgrade chocolatey
   - choco install python
   #- choco install pywin32
   #- python -m pip install pyinstaller
-  - PYEXE = $ChocolateyInstall/bin/python.exe
+  #- PYEXE = $ChocolateyInstall/bin/python.exe
+  - cmd.exe //c "RefreshEnv.cmd"
 install:
   #- python -m pip install pywin32
-  - $PYEXE -V
+  - python -V
   - where python
   - dir %ChocolateyInstall%\\bin
   # - set
