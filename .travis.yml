@@ -6,11 +6,12 @@ before_install:
   - choco install python
   #- choco install pywin32
   #- python -m pip install pyinstaller
-  #- PYEXE = $ChocolateyInstall/bin/python.exe
+  - PYEXE = "$ChocolateyInstall/bin/python.exe"
   - cmd.exe //c "RefreshEnv.cmd"
   - export PATH="$ChocolateyInstall/bin:$PATH"
 install:
   #- python -m pip install pywin32
+  - $PYEXE -V
   - python -V
   - where python
   - python -m pip install pyinstaller
