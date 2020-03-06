@@ -1,17 +1,17 @@
 language: sh
 os: windows
-
+env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
 before_install:
   # - choco upgrade chocolatey
   - choco install python
   #- choco install pywin32
   #- python -m pip install pyinstaller
-  - PYEXE = "$ChocolateyInstall/bin/python.exe"
+  #- export PYEXE = "$ChocolateyInstall/bin/python.exe"
   - cmd.exe //c "RefreshEnv.cmd"
-  - export PATH="$ChocolateyInstall/bin:$PATH"
+  #- export PATH="$ChocolateyInstall/bin:$PATH"
 install:
   #- python -m pip install pywin32
-  - $PYEXE -V
+  #- $PYEXE -V
   - python -V
   - where python
   - python -m pip install pyinstaller
