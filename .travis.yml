@@ -6,5 +6,10 @@ matrix:
 services:
   - docker
 
+install:
+  - cd proxy
+  - chmod +x start_docker.sh
+  - ./start_docker.sh
+
 script:
   - curl --head -x localhost:9002 http://requests-php-tests.herokuapp.com/get
