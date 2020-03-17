@@ -1,18 +1,14 @@
-language: sh
-os: windows
-env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
-before_install:
-  # - choco upgrade chocolatey
-  - choco install python --version 3.8
-  #- choco install pywin32
-  #- python -m pip install pyinstaller
-  #- export PYEXE = "$ChocolateyInstall/bin/python.exe"
-  - cmd.exe //c "RefreshEnv.cmd"
-  #- export PATH="$ChocolateyInstall/bin:$PATH"
-install:
-  #- python -m pip install pywin32
-  #- $PYEXE -V
-  - python -V
-  - where python
-  - python -m pip install pyinstaller
-  - pip install pywin32
+language: php
+matrix:
+  fast_finish: true
+  include:
+    - php: 7.4
+addons:
+ apt:
+  packages:
+   - mitmproxy
+
+before_script:
+ - mitmdump -s proxy.py &
+script:
+ - curl --head -x localhost:9002 http://requests-php-tests.herokuapp.com/get
