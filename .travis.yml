@@ -9,6 +9,6 @@ addons:
    - mitmproxy
 
 before_script:
- - mitmdump -s proxy.py -p 9002 -v &
+ - (mitmdump -s proxy.py -p 9002 -v &)
 script:
  - curl --head -x localhost:9002 http://requests-php-tests.herokuapp.com/get
