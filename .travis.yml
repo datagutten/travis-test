@@ -9,7 +9,7 @@ addons:
    - mitmproxy
 
 before_script:
- - (mitmdump -s proxy.py -p 9002 -v>proy.txt 2>&1 &)
+ - mitmdump -s proxy.py -p 9002 -v
  - cat proxy.txt
 script:
  - curl --head -x localhost:9002 http://requests-php-tests.herokuapp.com/get
