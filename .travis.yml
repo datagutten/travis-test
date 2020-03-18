@@ -10,7 +10,8 @@ addons:
 
 before_script:
  #- start-stop-daemon --start --background --pidfile $PIDFILE --make-pidfile --exec /usr/bin/mitmdump -- -s proxy.py -p 9002 -v
- - output = $(mitmdump -s proxy.py -p 9002 -v &) || exit $?
+ - output = $(mitmdump -s proxy.py -p 9002 -v &)
  - echo $output
+ - echo $?
 script:
  - curl --head -x localhost:9002 http://requests-php-tests.herokuapp.com/get
