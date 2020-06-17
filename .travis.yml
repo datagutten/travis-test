@@ -1,12 +1,10 @@
 language: python
 python:
   - 3.8
-matrix:
-  include:
-    - os: windows
-      language: sh
-    - os: linux
-
+os:
+  - windows
+  - linux
+jobs:
   allow_failures:
     - os: windows
 
