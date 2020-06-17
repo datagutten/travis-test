@@ -12,8 +12,8 @@ jobs:
 
 env:
   matrix:
-    - ISO=$ISO_NO BUILD_LANG=NO
-    - ISO=$ISO_SE BUILD_LANG=SE
+    - BUILD_LANG=NO
+    - BUILD_LANG=SE
 
 script:
   - echo $BUILD_LANG
