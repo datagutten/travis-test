@@ -1,17 +1,19 @@
-language: php
-matrix:
-  fast_finish: true
+language: python
+python:
+  - 3.8
+jobs:
   include:
-    - php: 7.4
-addons:
- apt:
-  packages:
-   - mitmproxy
+    - os: windows
+      language: sh
+    - os: linux
 
-before_script:
- #- start-stop-daemon --start --background --pidfile $PIDFILE --make-pidfile --exec /usr/bin/mitmdump -- -s proxy.py -p 9002 -v
- - output = $(mitmdump -s proxy.py -p 9002 -v &)
- - echo $output
- - echo $?
+  allow_failures:
+    - os: windows
+
+env:
+  matrix:
+    - ISO=$ISO_NO BUILD_LANG=NO
+    - ISO=$ISO_SE BUILD_LANG=SE
+
 script:
- - curl --head -x localhost:9002 http://requests-php-tests.herokuapp.com/get
+  - echo $BUILD_LANG
