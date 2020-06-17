@@ -8,14 +8,22 @@ jobs:
   include:
     - os: windows
       language: shell
+      env:
+        - BUILD_LANG=NO
+    - os: windows
+      language: shell
+      env:
+        - BUILD_LANG=SE
+
+    - os: linux
+      env:
+        - BUILD_LANG=NO
+    - os: linux
+      env:
+        - BUILD_LANG=SE
 
   allow_failures:
     - os: windows
-
-env:
-  matrix:
-    - BUILD_LANG=NO
-    - BUILD_LANG=SE
 
 script:
   - echo $BUILD_LANG
