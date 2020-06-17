@@ -5,6 +5,10 @@ os:
   - windows
   - linux
 jobs:
+  include:
+    - os: windows
+      language: shell
+
   allow_failures:
     - os: windows
 
